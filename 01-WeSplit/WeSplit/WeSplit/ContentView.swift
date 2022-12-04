@@ -12,7 +12,7 @@ struct ContentView: View {
     
     @FocusState var amountIsFocused: Bool
     
-    var tipPercentages = [10, 15, 20, 25, 0]
+    var tipPercentages = [0, 10, 15, 20, 25]
     
     var totalPerPerson: Double {
         let peopleCount = Double(numberOfPeople + 2)
@@ -20,16 +20,31 @@ struct ContentView: View {
         
         let tipValue = checkAmount / 100 * tipSelection
         let grandTotal = checkAmount + tipValue
+        
         let amountPerPerson = grandTotal / peopleCount
         
         return amountPerPerson
+    }
+    
+    var totalAmount: Double {
+        let tipSelection = Double(tipPercentage)
+        
+        let tipValue = checkAmount / 100 * tipSelection
+        let grandTotal = checkAmount + tipValue
+        
+        return grandTotal
+    }
+    
+    // extra challenge
+    var localCurrency : FloatingPointFormatStyle<Double>.Currency {
+        return FloatingPointFormatStyle<Double>.Currency(code: Locale.current.currencyCode ?? "USD")
     }
     
     var body: some View {
         NavigationView {
             Form {
                 Section {
-                    TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                    TextField("Amount", value: $checkAmount, format: localCurrency)
                         .keyboardType(.decimalPad)
                         .focused($amountIsFocused)
                     
@@ -42,17 +57,27 @@ struct ContentView: View {
                 
                 Section {
                     Picker("Tip percentage", selection: $tipPercentage) {
-                        ForEach(tipPercentages, id: \.self) {
-                            Text($0, format: .percent)
+                        // challenge 3
+                        ForEach(0..<101) {
+                            Text("\($0) %")
                         }
                     }
-                    .pickerStyle(.segmented)
                 } header: {
                     Text("How much tip do you want to leave?")
                 }
                 
                 Section {
-                    Text(totalPerPerson, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                    Text(totalPerPerson, format: localCurrency)
+                } header: {
+                    // challenge 1
+                    Text("Amount per person")
+                }
+                
+                // challenge 2
+                Section {
+                    Text(totalAmount, format: localCurrency)
+                } header: {
+                    Text("Total amount")
                 }
             }
             .navigationTitle("WeSplit")
