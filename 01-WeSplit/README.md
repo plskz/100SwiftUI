@@ -1,7 +1,41 @@
-# Project 1 - WeSplit
+<div align="center">
+  <h1>WeSplit</h1>
+  <samp>Project 1</samp>
+  <br/>
 
-## Challenges
+  <sub>
+    Author: <a href="https://github.com/plskz" target="_blank">Zai Santillan</a>
+    <br>
+    <small>December 5, 2022 - Monday</small>
+  </sub>
+</div>
 
-## What I learned
+[<< Home](../README.md) | [Project 2 >>](../02-Challenge%20Day/README.md)
 
-## Screenshots
+## 📝 What I learned
+
+Form, Section, NavigationView, @State, @FocusState, TextField, Picker, ForEach
+
+[Excalidraw - Day 18](https://dub.sh/plskz-100swiftui-wesplit)
+
+## 🏆 Challenges
+
+> 1. Add a header to the third section, saying “Amount per person”
+> 1. Add another section showing the total amount for the check – i.e., the original amount plus tip value, without dividing by the number of people.
+> 1. Change the tip percentage picker to show a new screen rather than using a segmented control, and give it a wider range of options – everything from 0% to 100%. Tip: use the range `0..<101` for your range rather than a fixed array.
+
+## 📷 Screenshots
+
+<div align="center">
+
+![WeSplit](./Screenshots/Mockup-WeSplit.png)
+
+</div>
+
+## Resources
+
+- [Hacking with Swift - WeSplit](https://www.hackingwithswift.com/books/ios-swiftui/wesplit-wrap-up)
+- https://developer.apple.com/documentation/SwiftUI/FocusState
+- https://developer.apple.com/documentation/swiftui/view/keyboardtype(_:)
+
+[<< Home](../README.md) | [Project 2 >>](../02-Challenge%20Day/README.md)
