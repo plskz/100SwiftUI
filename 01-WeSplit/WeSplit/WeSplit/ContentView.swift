@@ -56,10 +56,19 @@ struct ContentView: View {
                 }
                 
                 Section {
-                    Picker("Tip percentage", selection: $tipPercentage) {
-                        // challenge 3
-                        ForEach(0..<101) {
-                            Text("\($0) %")
+                    // challenge 3
+                    if #available(iOS 16.0, *) {
+                        Picker("Tip percentage", selection: $tipPercentage) {
+                            ForEach(0..<101) {
+                                Text("\($0) %")
+                            }
+                        }
+                        .pickerStyle(.navigationLink)
+                    } else {
+                        Picker("Tip percentage", selection: $tipPercentage) {
+                            ForEach(0..<101) {
+                                Text("\($0) %")
+                            }
                         }
                     }
                 } header: {
