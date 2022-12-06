@@ -37,7 +37,7 @@ Note: I decided to combine them together to challenge myself.
 
 ![Convertia](./Screenshots/Mockup-Convertia.png)
 
-![Demo - Convertia](./Screenshots/Demo-Convertia.mov)
+![Demo - Convertia](./Screenshots/Demo-Convertia.gif)
 
 </div>
 
