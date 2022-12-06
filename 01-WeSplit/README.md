@@ -28,7 +28,7 @@ Form, Section, NavigationView, @State, @FocusState, TextField, Picker, ForEach
 
 <div align="center">
 
-![WeSplit](./Screenshots/Mockup-WeSplit.png)
+![WeSplit - 2](./Screenshots/Mockup-WeSplit-2.png)
 
 </div>
 
@@ -37,5 +37,6 @@ Form, Section, NavigationView, @State, @FocusState, TextField, Picker, ForEach
 - [Hacking with Swift - WeSplit](https://www.hackingwithswift.com/books/ios-swiftui/wesplit-wrap-up)
 - https://developer.apple.com/documentation/SwiftUI/FocusState
 - https://developer.apple.com/documentation/swiftui/view/keyboardtype(_:)
+- [stackoverflow - SwiftUI Picker in Forms (iOS 16)](https://stackoverflow.com/questions/73896801/swiftui-picker-in-forms-ios-16)
 
 [<< Home](../README.md) | [Project 2 >>](../02-Challenge%20Day/README.md)
