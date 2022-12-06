@@ -3,7 +3,7 @@
 
 [![Swift 5.0+](https://img.shields.io/badge/Swift-5.0+-orange?style=flat&logo=swift)](https://developer.apple.com/swift/) [![Xcode 14.1](https://img.shields.io/badge/Xcode-14.1-007ACC?style=flat&logo=Xcode&logoColor=blue)](https://developer.apple.com/xcode/)
 
-<samp>Current Day: 18</samp>
+<samp>Current Day: 20</samp>
 
   <br/>
   
@@ -34,7 +34,7 @@ These projects helped and guided me through Swift and SwiftUI, but also offered 
 Challenges were projects I developed by myself starting from the basic requirements outlined in the course.
 
 - [Checkpoints](/00-Checkpoint/)
-- Challenge Day - Unit Converter
+- [Challenge Day - Unit Converter](/02-Challenge%20Day/)
 - Milestone 1 - Rock Paper Scissor
 - ...
 
