@@ -6,7 +6,6 @@
 
 import SwiftUI
 
-
 struct ContentView: View {
     @State private var inputValue: Double = 0
     
@@ -28,7 +27,7 @@ struct ContentView: View {
             tempUnits,
             lengthUnits,
             timeUnits,
-            volumeUnits
+            volumeUnits,
         ]
     }
     
@@ -103,7 +102,6 @@ struct ContentView: View {
         }
         .pickerStyle(.segmented)
     }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
