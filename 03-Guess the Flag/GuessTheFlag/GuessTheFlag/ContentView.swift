@@ -7,12 +7,25 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var showingScore = false
+    @State private var isShowingScore = false
+    @State private var isShowingGameOver = false
+    
+    @State private var countries = [
+        "Estonia", "France", "Germany",
+        "Ireland", "Italy", "Monaco",
+        "Nigeria", "Poland", "Russia",
+        "Spain", "UK", "US"
+    ].shuffled()
+    
+    @State private var score = 0
     @State private var scoreTitle = ""
     
-    @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Monaco", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
+    @State private var currentRound = 1
+    @State private var selectedAnswer = ""
     
     @State private var correctAnswer = Int.random(in: 0...2)
+    
+    let GAME_COUNT = 8
     
     var body: some View {
         ZStack {
@@ -62,33 +75,60 @@ struct ContentView: View {
                 Spacer()
                 Spacer()
                 
-                Text("Score: ???")
+                Text("Score: \(score)")
                     .foregroundColor(.white)
                     .font(.title.bold())
+                
+                Text("Round: \(currentRound)")
+                    .foregroundColor(.white)
+                    .font(.title2)
                 
                 Spacer()
             }
             .padding()
         }
-        .alert(scoreTitle, isPresented: $showingScore) {
+        .alert(scoreTitle, isPresented: $isShowingScore) {
             Button("Continue", action: askQuestion)
         } message: {
-            Text("Your score is ???")
+            if scoreTitle == "Correct!" {
+                Text("You got the correct answer!")
+                Text("Your score is \(score)")
+            } else {
+                Text("That's the flag for \(selectedAnswer)")
+                Text("Your score is \(score)")
+            }
+        }
+        .alert("Game Over!", isPresented: $isShowingGameOver) {
+            Button("Restart", action: restartGame)
+        } message: {
+            Text("Your final score is \(score) out of \(GAME_COUNT).")
         }
     }
     
     func flagTapped(_ number: Int) {
-        if number == correctAnswer {
-            scoreTitle = "Correct!"
-        } else {
-            scoreTitle = "Wrong!"
-        }
-        showingScore = true
+        selectedAnswer = countries[number]
+        scoreTitle = number == correctAnswer ? "Correct!" : "Wrong!"
+        score = number == correctAnswer ? score + 1 : score
+        
+        isShowingScore = true
     }
     
     func askQuestion() {
+        if currentRound == GAME_COUNT {
+            isShowingGameOver = true
+        } else {
+            currentRound += 1
+            countries.shuffle()
+            correctAnswer = Int.random(in: 0...2)
+        }
+    }
+    
+    func restartGame() {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+        
+        score = 0
+        currentRound = 1
     }
 }
 
