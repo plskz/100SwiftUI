@@ -36,8 +36,8 @@ struct ContentView: View {
     }
     
     // extra challenge
-    var localCurrency : FloatingPointFormatStyle<Double>.Currency {
-        return FloatingPointFormatStyle<Double>.Currency(code: Locale.current.currencyCode ?? "USD")
+    var localCurrency: FloatingPointFormatStyle<Double>.Currency {
+        .currency(code: Locale.current.currencyCode ?? "USD")
     }
     
     var body: some View {
