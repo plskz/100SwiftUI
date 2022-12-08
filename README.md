@@ -3,7 +3,7 @@
 
 [![Swift 5.0+](https://img.shields.io/badge/Swift-5.0+-orange?style=flat&logo=swift)](https://developer.apple.com/swift/) [![Xcode 14.1](https://img.shields.io/badge/Xcode-14.1-007ACC?style=flat&logo=Xcode&logoColor=blue)](https://developer.apple.com/xcode/)
 
-<samp>Current Day: 22</samp>
+<samp>Current Day: 23</samp>
 
   <br/>
   
