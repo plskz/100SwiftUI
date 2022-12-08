@@ -3,7 +3,7 @@
 
 [![Swift 5.0+](https://img.shields.io/badge/Swift-5.0+-orange?style=flat&logo=swift)](https://developer.apple.com/swift/) [![Xcode 14.1](https://img.shields.io/badge/Xcode-14.1-007ACC?style=flat&logo=Xcode&logoColor=blue)](https://developer.apple.com/xcode/)
 
-<samp>Current Day: 21</samp>
+<samp>Current Day: 22</samp>
 
   <br/>
   
@@ -23,8 +23,8 @@ My solutions to Paul Hudson's [100 Days of SwiftUI](https://www.hackingwithswift
 These projects helped and guided me through Swift and SwiftUI, but also offered me the opportunity of solving a couple of challenges by myself each time.
 
 - [Project 1 - WeSplit](/01-WeSplit/)
-- Project 2 - Guess the Flag - 🚧 In Progress
-- Project 3 - Views and Modifiers
+- [Project 2 - Guess the Flag](/03-Guess%20the%20Flag/)
+- Project 3 - Views and Modifiers - 🚧 In Progress
 - Project 4 - BetterRest
 - Project 5 - WordScramble
 - ...
