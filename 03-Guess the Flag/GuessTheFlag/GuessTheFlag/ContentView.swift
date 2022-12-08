@@ -8,13 +8,17 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var showingScore = false
+    @State private var showingFinalScore = false
+    
     @State private var scoreTitle = ""
     @State private var currentScore = 0
+    @State private var currentRound = 1
     @State private var selectedAnswer = ""
     
     @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Monaco", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
-    
     @State private var correctAnswer = Int.random(in: 0...2)
+    
+    let GAME_COUNT = 8
     
     var body: some View {
         ZStack {
@@ -68,6 +72,10 @@ struct ContentView: View {
                     .foregroundColor(.white)
                     .font(.title.bold())
                 
+                Text("Round: \(currentRound)")
+                    .foregroundColor(.white)
+                    .font(.title2)
+                
                 Spacer()
             }
             .padding()
@@ -83,6 +91,11 @@ struct ContentView: View {
                 Text("Your score is \(currentScore)")
             }
         }
+        .alert("Game Over!", isPresented: $showingFinalScore) {
+            Button("Restart", action: restartGame)
+        } message: {
+            Text("Your final score is \(currentScore) out of \(GAME_COUNT).")
+        }
     }
     
     func flagTapped(_ number: Int) {
@@ -95,11 +108,27 @@ struct ContentView: View {
             scoreTitle = "Wrong!"
         }
         showingScore = true
+        
+        if currentRound == GAME_COUNT {
+            showingFinalScore = true
+            showingScore = false
+            return
+        }
+        
+        currentRound += 1
     }
     
     func askQuestion() {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+    }
+    
+    func restartGame() {
+        countries.shuffle()
+        correctAnswer = Int.random(in: 0...2)
+        
+        currentScore = 0
+        currentRound = 1
     }
 }
 
