@@ -36,7 +36,8 @@ struct ContentView: View {
                 ],
                 center: .top,
                 startRadius: 200,
-                endRadius: 400)
+                endRadius: 400
+            )
             .ignoresSafeArea()
             
             VStack {
@@ -94,20 +95,21 @@ struct ContentView: View {
                 Text("You got the correct answer!")
                 Text("Your score is \(score)")
             } else {
-                Text("That's the flag for \(selectedAnswer)")
+                Text("That's the flag for \(selectedAnswer)") // challenge 2
                 Text("Your score is \(score)")
             }
         }
         .alert("Game Over!", isPresented: $isShowingGameOver) {
             Button("Restart", action: restartGame)
         } message: {
-            Text("Your final score is \(score) out of \(GAME_COUNT).")
+            Text("Your final score is \(score) out of \(GAME_COUNT).") // challenge 3
         }
     }
     
     func flagTapped(_ number: Int) {
         selectedAnswer = countries[number]
-        scoreTitle = number == correctAnswer ? "Correct!" : "Wrong!"
+        
+        scoreTitle = number == correctAnswer ? "Correct!" : "Wrong!" // challenge 1
         score = number == correctAnswer ? score + 1 : score
         
         isShowingScore = true
