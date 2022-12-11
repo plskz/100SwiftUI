@@ -10,16 +10,8 @@ struct Title: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.largeTitle.bold())
+            .foregroundColor(.blue)
             .padding()
-            .background(
-                LinearGradient(
-                    gradient: Gradient(colors: [.blue, .teal]),
-                    startPoint: .leading,
-                    endPoint: .trailing
-                )
-            )
-            .cornerRadius(20)
-            .blur(radius: 0.5)
     }
 }
 
@@ -33,12 +25,12 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             RadialGradient(
-                gradient: Gradient(colors: [.blue, .black]),
+                gradient: Gradient(colors: [.teal, .black]),
                 center: .top,
                 startRadius: 20,
                 endRadius: 300
             )
-            Text("Raccoons")
+            Text("Prominent Title")
                 .titleStyle()
         }
         .ignoresSafeArea()
