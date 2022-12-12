@@ -42,7 +42,7 @@ some View, Conditional modifiers, Environment modifiers, View Composition, Custo
  
 ## Resources
 
-- [Hacking with Swift - TODO](https://www.hackingwithswift.com/100/swiftui/TODO)
+- [Hacking with Swift - Views and Modifiers](https://www.hackingwithswift.com/books/ios-swiftui/views-and-modifiers-wrap-up)
 - https://www.swiftbysundell.com/questions/swiftui-modifier-order/
 - https://stackoverflow.com/questions/56433665/what-is-the-some-keyword-in-swiftui
 
