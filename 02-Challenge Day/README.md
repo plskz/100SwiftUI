@@ -35,9 +35,9 @@ Note: I decided to combine them together to challenge myself.
 
 <div align="center">
 
-![Convertia](./Screenshots/Mockup-Convertia.png)
+![Convertia](./_Screenshots/Mockup-Convertia.png)
 
-![Demo - Convertia](./Screenshots/Demo-Convertia.gif)
+![Demo - Convertia](./_Screenshots/Demo-Convertia.gif)
 
 </div>
 

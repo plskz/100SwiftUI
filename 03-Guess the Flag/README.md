@@ -36,9 +36,9 @@ Stacks, Buttons, Images, Alerts, LinearGradient
 
 <div align="center">
 
-![Mockup - GuessTheFlag](./Screenshots/Mockup-GuessTheFlag.png)
+![Mockup - GuessTheFlag](./_Screenshots/Mockup-GuessTheFlag.png)
 
-![Demo - GuessTheFlag](./Screenshots/Demo%20-%20GuessTheFlag.gif)
+![Demo - GuessTheFlag](./_Screenshots/Demo%20-%20GuessTheFlag.gif)
 
 </div>
 

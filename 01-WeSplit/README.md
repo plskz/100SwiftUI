@@ -28,7 +28,7 @@ Form, Section, NavigationView, @State, @FocusState, TextField, Picker, ForEach
 
 <div align="center">
 
-![WeSplit - 2](./Screenshots/Mockup-WeSplit-2.png)
+![WeSplit - 2](./_Screenshots/Mockup-WeSplit-2.png)
 
 </div>
 

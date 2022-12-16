@@ -36,7 +36,7 @@ some View, Conditional modifiers, Environment modifiers, View Composition, Custo
 
 <div align="center">
 
-![Day 24](./Screenshots/Day%2024.png)
+![Day 24](./_Screenshots/Day%2024.png)
 
 </div>
  

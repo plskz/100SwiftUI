@@ -30,7 +30,7 @@
 
 <div align="center">
 
-![Demo - Day 25](./Screenshots/RockPaperScissors.gif)
+![Demo - Day 25](./_Screenshots/RockPaperScissors.gif)
 
 </div>
 
