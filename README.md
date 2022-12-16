@@ -3,7 +3,7 @@
 
 [![Swift 5.7.2](https://img.shields.io/badge/Swift-5.7.2-orange?style=flat&logo=swift)](https://developer.apple.com/swift/) [![Xcode 14.2](https://img.shields.io/badge/Xcode-14.2-007ACC?style=flat&logo=Xcode&logoColor=blue)](https://developer.apple.com/xcode/)
 
-<samp>Current Day: 25</samp>
+<samp>Current Day: 26</samp>
 
   <br/>
   
@@ -25,8 +25,9 @@ These projects helped and guided me through Swift and SwiftUI, but also offered 
 - [Project 1 - WeSplit](/01-WeSplit/)
 - [Project 2 - Guess the Flag](/03-Guess%20the%20Flag/)
 - [Project 3 - Views and Modifiers](/04-Views%20and%20Modifiers/)
-- Project 4 - BetterRest
+- [Project 4 - BetterRest](/06-BetterRest/) - 🚧 In Progress
 - Project 5 - WordScramble
+- Project 6 - Animations
 - ...
 
 ## 🏆 Challenges
@@ -35,7 +36,9 @@ Challenges were projects I developed by myself starting from the basic requireme
 
 - [Checkpoints](/00-Checkpoint/)
 - [Challenge Day - Unit Converter](/02-Challenge%20Day/)
-- Milestone 1 - Rock Paper Scissor - 🚧 In Progress
+- [Milestone 1 - Rock Paper Scissor](/05-Milestone%201/)
+- Milestone 2 - Edutainment
+- Milestone 3 - Habit Tracking
 - ...
 
 <br />
