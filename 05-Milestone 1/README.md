@@ -12,6 +12,12 @@
 
 [<< 04-Views and Modifiers](../04-Views%20and%20Modifiers/) | [06-BetterRest >>](../06-BetterRest/)
 
+## 📝 Notes
+
+Here's my notes for Day 25 Challenge
+
+[Excalidraw - Day 25](https://dub.sh/plskz-100swiftui-milestone1)
+
 ## 🏆 Challenges
 
 > You have a basic understanding of arrays, state, views, images, text, and more, so let’s put them together: your challenge is to make a brain training game that challenges players to win or lose at rock, paper, scissors.
