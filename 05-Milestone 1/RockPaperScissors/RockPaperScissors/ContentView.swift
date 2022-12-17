@@ -113,27 +113,16 @@ struct ContentView: View {
     func moveResult(_ player: Int) -> String {
         if playerPick == computerPick { return "Draw" }
         
+        let winningMoves = [1, 2, 0] // paper, scissor, rock
+        let didWin: Bool
+        
         if shouldWin {
-            if (
-                (playerPick == 2 && computerPick == 1) ||
-                (playerPick == 1 && computerPick == 0) ||
-                (playerPick == 0 && computerPick == 2)
-            ) {
-                return "Correct"
-            } else {
-                return "Wrong"
-            }
+            didWin = playerPick == winningMoves[computerPick]
         } else {
-            if (
-                (playerPick == 0 && computerPick == 1) ||
-                (playerPick == 1 && computerPick == 2) ||
-                (playerPick == 2 && computerPick == 0)
-            ) {
-                return "Correct"
-            } else {
-                return "Wrong"
-            }
+            didWin = computerPick == winningMoves[playerPick]
         }
+        
+        return didWin ? "Correct" : "Wrong"
     }
     
     func choiceTapped(_ number: Int) {
@@ -141,7 +130,9 @@ struct ContentView: View {
         
         scoreTitle = moveResult(playerPick)
         score = scoreTitle == "Draw" ? score : scoreTitle == "Correct" ? score + 1 : score - 1
-        score = score < 0 ? 0 : score // to avoid negative score
+        
+        // to avoid negative score
+        score = score < 0 ? 0 : score
         
         isShowingScore = true
     }
