@@ -21,21 +21,33 @@ struct ContentView: View {
         NavigationView {
             Form {
                 Section {
-                    DatePicker("Enter a time", selection: $wakeUp, displayedComponents: .hourAndMinute)
+                    HStack {
+                        Image(systemName: "clock")
+                            .foregroundStyle(.blue)
+                        DatePicker("Enter a time", selection: $wakeUp, displayedComponents: .hourAndMinute)
+                    }
                 } header: {
                     HeaderFont("When do you want to wake up?")
                 }
                 
                 Section {
-                    Stepper("\(sleepAmount.formatted()) hours", value: $sleepAmount, in: 4...12, step: 0.25)
+                    HStack {
+                        Image(systemName: "bed.double")
+                            .foregroundStyle(.blue)
+                        Stepper("\(sleepAmount.formatted()) hours", value: $sleepAmount, in: 4...12, step: 0.25)
+                    }
                 } header: {
                     HeaderFont("Desired amount of sleep")
                 }
                 
                 Section {
-                    Picker(coffeeAmount == 1 ? "1 cup" : "\(coffeeAmount) cups", selection: $coffeeAmount) {
-                        ForEach(1...20, id: \.self) {
-                            Text($0 == 1 ? "\($0) cup" : "\($0) cups")
+                    HStack {
+                        Image(systemName: "cup.and.saucer")
+                            .foregroundStyle(.blue)
+                        Picker(coffeeAmount == 1 ? "1 cup" : "\(coffeeAmount) cups", selection: $coffeeAmount) {
+                            ForEach(1...20, id: \.self) {
+                                Text($0 == 1 ? "1 cup" : "\($0) cups")
+                            }
                         }
                     }
                 } header: {
@@ -43,12 +55,16 @@ struct ContentView: View {
                 }
                 
                 Section {
-                    Text(calculateBedtime())
+                    HStack {
+                        Image(systemName: "moon.stars")
+                            .foregroundStyle(.blue)
+                        Text(calculateBedtime())
+                    }
                 } header: {
                     HeaderFont("Recommended bed time")
                 }
             }
-            .navigationTitle("BetterRest")
+            .navigationTitle("BetterRest 🌙")
         }
     }
     

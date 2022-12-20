@@ -16,6 +16,7 @@ struct HeaderFont: View {
     var body: some View {
         Text(headerTitle)
             .font(.subheadline.bold())
+            .foregroundColor(.pink)
             .textCase(nil)
     }
 }
