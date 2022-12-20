@@ -55,14 +55,16 @@ struct ContentView: View {
                 }
                 
                 Section {
-                    HStack {
-                        Image(systemName: "moon.stars")
-                            .foregroundStyle(.blue)
+                    VStack {
+                        Text("Recommended bedtime")
+                            .foregroundStyle(.pink)
                         Text(calculateBedtime())
+                            .font(.title2.bold())
+                            .padding(5)
                     }
-                } header: {
-                    HeaderFont("Recommended bed time")
+                    .padding(15)
                 }
+                .frame(maxWidth: .infinity)
             }
             .navigationTitle("BetterRest 🌙")
         }
