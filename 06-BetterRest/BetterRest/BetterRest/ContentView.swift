@@ -12,10 +12,6 @@ struct ContentView: View {
     @State private var sleepAmount = 8.0
     @State private var coffeeAmount = 1
     
-    @State private var alertTitle = ""
-    @State private var alertMessage = ""
-    @State private var isShowingAlert = false
-    
     static var defaultWakeTime: Date {
         let components = DateComponents(hour: 7, minute: 0)
         return Calendar.current.date(from: components) ?? Date.now
@@ -54,7 +50,6 @@ struct ContentView: View {
             }
             .navigationTitle("BetterRest")
         }
-        
     }
     
     func calculateBedtime() -> String {
