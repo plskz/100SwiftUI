@@ -45,21 +45,19 @@ struct ContentView: View {
                 } header: {
                     HeaderFont("Daily coffee intake")
                 }
+                
+                Section {
+                    Text(calculateBedtime())
+                } header: {
+                    HeaderFont("Recommended bed time")
+                }
             }
             .navigationTitle("BetterRest")
-            .toolbar {
-                Button("Calculate", action: calculateBedtime)
-            }
-            .alert(alertTitle, isPresented: $isShowingAlert) {
-                Button("OK") { }
-            } message: {
-                Text(alertMessage)
-            }
         }
         
     }
     
-    func calculateBedtime() {
+    func calculateBedtime() -> String {
         do {
             let config = MLModelConfiguration()
             let model = try SleepCalculator(configuration: config)
@@ -68,23 +66,18 @@ struct ContentView: View {
             let hour = (components.hour ?? 0) * 60 * 60
             let minute = (components.minute ?? 0) * 60
             
-            let prediction = try model.prediction(wake: Double(hour + minute), estimatedSleep: sleepAmount, coffee: Double(coffeeAmount))
+            let prediction = try model.prediction(
+                wake: Double(hour + minute),
+                estimatedSleep: sleepAmount,
+                coffee: Double(coffeeAmount)
+            )
             
             let sleepTime = wakeUp - prediction.actualSleep
-            print(sleepTime)
             
-            alertTitle = "Your ideal bedtime is..."
-            alertMessage = sleepTime.formatted(date: .omitted, time: .shortened)
-            
-            
-            print(alertMessage)
-            
+            return sleepTime.formatted(date: .omitted, time: .shortened)
         } catch {
-            alertTitle = "Error"
-            alertMessage = "Sorry, there was a problem calculating your bedtime."
+            return "Error"
         }
-        
-        isShowingAlert = true
     }
 }
 
