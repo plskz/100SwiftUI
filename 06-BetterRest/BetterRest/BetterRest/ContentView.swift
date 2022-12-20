@@ -17,9 +17,7 @@ struct ContentView: View {
     @State private var isShowingAlert = false
     
     static var defaultWakeTime: Date {
-        var components = DateComponents()
-        components.hour = 7
-        components.minute = 0
+        let components = DateComponents(hour: 7, minute: 0)
         return Calendar.current.date(from: components) ?? Date.now
     }
     
