@@ -22,8 +22,7 @@ struct ContentView: View {
             Form {
                 Section {
                     HStack {
-                        Image(systemName: "clock")
-                            .foregroundStyle(.blue)
+                        Icon("clock")
                         DatePicker("Enter a time", selection: $wakeUp, displayedComponents: .hourAndMinute)
                     }
                 } header: {
@@ -32,8 +31,7 @@ struct ContentView: View {
                 
                 Section {
                     HStack {
-                        Image(systemName: "bed.double")
-                            .foregroundStyle(.blue)
+                        Icon("bed.double")
                         Stepper("\(sleepAmount.formatted()) hours", value: $sleepAmount, in: 4...12, step: 0.25)
                     }
                 } header: {
@@ -42,8 +40,7 @@ struct ContentView: View {
                 
                 Section {
                     HStack {
-                        Image(systemName: "cup.and.saucer")
-                            .foregroundStyle(.blue)
+                        Icon("cup.and.saucer")
                         Picker(coffeeAmount == 1 ? "1 cup" : "\(coffeeAmount) cups", selection: $coffeeAmount) {
                             ForEach(1...20, id: \.self) {
                                 Text($0 == 1 ? "1 cup" : "\($0) cups")
