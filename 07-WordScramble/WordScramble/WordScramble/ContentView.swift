@@ -21,6 +21,7 @@ struct ContentView: View {
                 Section {
                     TextField("Enter your word", text: $newWord)
                         .autocapitalization(.none)
+                        .autocorrectionDisabled(true)
                 }
                 
                 Section {
