@@ -48,6 +48,18 @@ struct ContentView: View {
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
         guard answer.count > 0 else { return }
         
+        // challenge 1
+        guard isLongEnough(word: answer) else {
+            wordError(title: "Word too short", message: "Word should be greater than 3 letters!")
+            return
+        }
+        
+        // challenge 1
+        guard isNotRootWord(word: answer) else {
+            wordError(title: "Root word detected", message: "You can't use the start word!")
+            return
+        }
+        
         guard isOriginal(word: answer) else {
             wordError(title: "Word used already", message: "Be more original")
             return
@@ -93,7 +105,17 @@ struct ContentView: View {
     }
     
     func isOriginal(word: String) -> Bool {
-        !usedWords.contains(word)
+        return !usedWords.contains(word)
+    }
+    
+    // challenge 1
+    func isLongEnough(word: String) -> Bool {
+        return word.count > 3
+    }
+    
+    // challenge 1
+    func isNotRootWord(word: String) -> Bool {
+        return word != rootWord
     }
     
     func isPossible(word: String) -> Bool {
