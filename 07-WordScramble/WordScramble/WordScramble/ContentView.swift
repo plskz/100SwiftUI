@@ -15,6 +15,8 @@ struct ContentView: View {
     @State private var errorMessage = ""
     @State private var isShowingError = false
     
+    @State private var score = 0
+    
     var body: some View {
         NavigationView {
             List {
@@ -45,6 +47,12 @@ struct ContentView: View {
                 // challenge 2
                 ToolbarItem(placement: .primaryAction) {
                     Button("Restart", action: startGame)
+                }
+                
+                // challenge 3
+                ToolbarItem(placement: .bottomBar) {
+                    Text("Score: \(score)")
+                        .font(.title3)
                 }
             }
         }
@@ -85,6 +93,9 @@ struct ContentView: View {
             usedWords.insert(answer, at: 0)
         }
         
+        // challenge 3
+        score += answer.count
+        
         newWord = ""
     }
     
@@ -104,6 +115,9 @@ struct ContentView: View {
                 // challenge 2
                 usedWords.removeAll()
                 newWord = ""
+                
+                // challenge 3
+                score = 0
                 
                 // If we are here everything has worked, so we can exit
                 return
