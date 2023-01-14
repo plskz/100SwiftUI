@@ -41,6 +41,12 @@ struct ContentView: View {
             } message: {
                 Text(errorMessage)
             }
+            .toolbar {
+                // challenge 2
+                ToolbarItem(placement: .primaryAction) {
+                    Button("Restart", action: startGame)
+                }
+            }
         }
     }
     
@@ -94,6 +100,10 @@ struct ContentView: View {
                 
                 // 4. Pick one random word, or use "silkworm" as a sensible default
                 rootWord = allWords.randomElement() ?? "silkworm"
+                
+                // challenge 2
+                usedWords.removeAll()
+                newWord = ""
                 
                 // If we are here everything has worked, so we can exit
                 return
