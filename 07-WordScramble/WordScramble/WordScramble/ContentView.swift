@@ -15,6 +15,8 @@ struct ContentView: View {
     @State private var errorMessage = ""
     @State private var isShowingError = false
     
+    @State private var score = 0
+    
     var body: some View {
         NavigationView {
             List {
@@ -41,12 +43,36 @@ struct ContentView: View {
             } message: {
                 Text(errorMessage)
             }
+            .toolbar {
+                // challenge 2
+                ToolbarItem(placement: .primaryAction) {
+                    Button("Restart", action: startGame)
+                }
+                
+                // challenge 3
+                ToolbarItem(placement: .bottomBar) {
+                    Text("Score: \(score)")
+                        .font(.title3)
+                }
+            }
         }
     }
     
     func addNewWord() {
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
         guard answer.count > 0 else { return }
+        
+        // challenge 1
+        guard isLongEnough(word: answer) else {
+            wordError(title: "Word too short", message: "Word should be greater than 3 letters!")
+            return
+        }
+        
+        // challenge 1
+        guard isNotRootWord(word: answer) else {
+            wordError(title: "Root word detected", message: "You can't use the start word!")
+            return
+        }
         
         guard isOriginal(word: answer) else {
             wordError(title: "Word used already", message: "Be more original")
@@ -67,6 +93,9 @@ struct ContentView: View {
             usedWords.insert(answer, at: 0)
         }
         
+        // challenge 3
+        score += answer.count
+        
         newWord = ""
     }
     
@@ -83,6 +112,13 @@ struct ContentView: View {
                 // 4. Pick one random word, or use "silkworm" as a sensible default
                 rootWord = allWords.randomElement() ?? "silkworm"
                 
+                // challenge 2
+                usedWords.removeAll()
+                newWord = ""
+                
+                // challenge 3
+                score = 0
+                
                 // If we are here everything has worked, so we can exit
                 return
             }
@@ -93,7 +129,17 @@ struct ContentView: View {
     }
     
     func isOriginal(word: String) -> Bool {
-        !usedWords.contains(word)
+        return !usedWords.contains(word)
+    }
+    
+    // challenge 1
+    func isLongEnough(word: String) -> Bool {
+        return word.count > 3
+    }
+    
+    // challenge 1
+    func isNotRootWord(word: String) -> Bool {
+        return word != rootWord
     }
     
     func isPossible(word: String) -> Bool {
