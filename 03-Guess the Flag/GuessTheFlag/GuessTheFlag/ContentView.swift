@@ -41,6 +41,10 @@ struct ContentView: View {
     
     @State private var correctAnswer = Int.random(in: 0...2)
     
+    @State private var rotateAmount = [0.0, 0.0, 0.0]  // project 6 - challenge 1
+    @State private var opacityAmount = [1.0, 1.0, 1.0] // project 6 - challenge 2
+    @State private var scaleAmount = [1.0, 1.0, 1.0]   // project 6 - challenge 3
+    
     let GAME_COUNT = 8
     
     var body: some View {
@@ -79,6 +83,10 @@ struct ContentView: View {
                         } label: {
                             FlagImage(of: countries[number]) // project 3 - challenge 2
                         }
+                        .rotation3DEffect(Angle(degrees: rotateAmount[number]), axis: (x: 0, y: 1, z: 0)) // project 6 - challenge 1
+                        .opacity(opacityAmount[number])     // project 6 - challenge 2
+                        .scaleEffect(scaleAmount[number])   // project 6 - challenge 3
+                        .animation(.default, value: scaleAmount)
                     }
                 }
                 .frame(maxWidth: .infinity)
@@ -122,10 +130,21 @@ struct ContentView: View {
     func flagTapped(_ number: Int) {
         selectedAnswer = countries[number]
         
+        // project 6 - challenge 1
+        rotateAmount[number] += 360
+        
+        // project 6 - challenge 2 and 3
+        for notTapped in 0..<3 where notTapped != number {
+            opacityAmount[notTapped] = 0.25
+            scaleAmount[notTapped] = 0.85
+        }
+        
         scoreTitle = number == correctAnswer ? "Correct!" : "Wrong!" // challenge 1
         score = number == correctAnswer ? score + 1 : score
         
-        isShowingScore = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            isShowingScore = true
+        }
     }
     
     func askQuestion() {
@@ -133,14 +152,21 @@ struct ContentView: View {
             isShowingGameOver = true
         } else {
             currentRound += 1
+            
             countries.shuffle()
             correctAnswer = Int.random(in: 0...2)
+            
+            opacityAmount = [1.0, 1.0, 1.0]
+            scaleAmount = [1.0, 1.0, 1.0]
         }
     }
     
     func restartGame() {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+        
+        opacityAmount = [1.0, 1.0, 1.0]
+        scaleAmount = [1.0, 1.0, 1.0]
         
         score = 0
         currentRound = 1
