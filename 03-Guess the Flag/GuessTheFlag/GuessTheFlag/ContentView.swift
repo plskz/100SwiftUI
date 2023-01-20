@@ -96,6 +96,7 @@ struct ContentView: View {
                                 .opacity(enabled ? (selectedAnswer == countries[number] ? 1 : opacityAmount) : 1)
                             // project 6 - challenge 3
                                 .scaleEffect(enabled ? (selectedAnswer == countries[number] ? 1 : opacityAmount) : 1)
+                                .animation(.default, value: enabled)
                         }
                     }
                 }
@@ -153,15 +154,14 @@ struct ContentView: View {
             currentRound += 1
             countries.shuffle()
             correctAnswer = Int.random(in: 0...2)
-            withAnimation {
-                enabled = false
-            }
+            enabled = false
         }
     }
     
     func restartGame() {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+        enabled = false
         
         score = 0
         currentRound = 1
