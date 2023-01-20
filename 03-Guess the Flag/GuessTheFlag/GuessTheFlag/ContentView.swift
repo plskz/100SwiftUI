@@ -142,7 +142,9 @@ struct ContentView: View {
         scoreTitle = number == correctAnswer ? "Correct!" : "Wrong!" // challenge 1
         score = number == correctAnswer ? score + 1 : score
         
-        isShowingScore = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            isShowingScore = true
+        }
     }
     
     func askQuestion() {
