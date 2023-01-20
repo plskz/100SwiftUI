@@ -94,6 +94,8 @@ struct ContentView: View {
                                 .rotation3DEffect(Angle(degrees: selectedAnswer == countries[number] ? animationAmount : 0), axis: (x: 0, y: 1, z: 0))
                             // project 6 - challenge 2
                                 .opacity(enabled ? (selectedAnswer == countries[number] ? 1 : opacityAmount) : 1)
+                            // project 6 - challenge 3
+                                .scaleEffect(enabled ? (selectedAnswer == countries[number] ? 1 : opacityAmount) : 1)
                         }
                     }
                 }
