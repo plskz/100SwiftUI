@@ -41,6 +41,9 @@ struct ContentView: View {
     
     @State private var correctAnswer = Int.random(in: 0...2)
     
+    // project 6 - challenge 1
+    @State private var animationAmount = 0.0
+    
     let GAME_COUNT = 8
     
     var body: some View {
@@ -78,6 +81,7 @@ struct ContentView: View {
                             flagTapped(number)
                         } label: {
                             FlagImage(of: countries[number]) // project 3 - challenge 2
+                                .rotation3DEffect(Angle(degrees: animationAmount), axis: (x: 0, y: 1, z: 0)) // project 6 - challenge 1
                         }
                     }
                 }
@@ -121,6 +125,7 @@ struct ContentView: View {
     
     func flagTapped(_ number: Int) {
         selectedAnswer = countries[number]
+        animationAmount += 360
         
         scoreTitle = number == correctAnswer ? "Correct!" : "Wrong!" // challenge 1
         score = number == correctAnswer ? score + 1 : score
