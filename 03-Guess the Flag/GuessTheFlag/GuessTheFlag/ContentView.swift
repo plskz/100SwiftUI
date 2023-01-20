@@ -44,6 +44,10 @@ struct ContentView: View {
     // project 6 - challenge 1
     @State private var animationAmount = 0.0
     
+    // project 6 - challenge 2
+    @State private var opacityAmount = 1.0
+    @State private var enabled = false
+    
     let GAME_COUNT = 8
     
     var body: some View {
@@ -79,9 +83,17 @@ struct ContentView: View {
                     ForEach(0..<3) { number in
                         Button {
                             flagTapped(number)
+                            withAnimation {
+                                enabled.toggle()
+                                animationAmount += 360
+                                opacityAmount = 0.25
+                            }
                         } label: {
                             FlagImage(of: countries[number]) // project 3 - challenge 2
-                                .rotation3DEffect(Angle(degrees: animationAmount), axis: (x: 0, y: 1, z: 0)) // project 6 - challenge 1
+                            // project 6 - challenge 1
+                                .rotation3DEffect(Angle(degrees: selectedAnswer == countries[number] ? animationAmount : 0), axis: (x: 0, y: 1, z: 0))
+                            // project 6 - challenge 2
+                                .opacity(enabled ? (selectedAnswer == countries[number] ? 1 : opacityAmount) : 1)
                         }
                     }
                 }
@@ -125,7 +137,6 @@ struct ContentView: View {
     
     func flagTapped(_ number: Int) {
         selectedAnswer = countries[number]
-        animationAmount += 360
         
         scoreTitle = number == correctAnswer ? "Correct!" : "Wrong!" // challenge 1
         score = number == correctAnswer ? score + 1 : score
@@ -140,6 +151,9 @@ struct ContentView: View {
             currentRound += 1
             countries.shuffle()
             correctAnswer = Int.random(in: 0...2)
+            withAnimation {
+                enabled = false
+            }
         }
     }
     
