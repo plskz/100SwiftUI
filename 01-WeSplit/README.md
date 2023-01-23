@@ -10,7 +10,7 @@
   </sub>
 </div>
 
-[<< Home](https://github.com/plskz/100SwiftUI/) | [02-Challenge Day >>](../02-Challenge%20Day/)
+[<< 00-Checkpoint](../00-Checkpoint/) | [02-Challenge Day >>](../02-Challenge%20Day/)
 
 ## 📝 What I learned
 
@@ -39,4 +39,4 @@ Form, Section, NavigationView, @State, @FocusState, TextField, Picker, ForEach
 - https://developer.apple.com/documentation/swiftui/view/keyboardtype(_:)
 - [stackoverflow - SwiftUI Picker in Forms (iOS 16)](https://stackoverflow.com/questions/73896801/swiftui-picker-in-forms-ios-16)
 
-[<< Home](https://github.com/plskz/100SwiftUI/) | [02-Challenge Day >>](../02-Challenge%20Day/)
+[<< 00-Checkpoint](../00-Checkpoint/) | [02-Challenge Day >>](../02-Challenge%20Day/)
