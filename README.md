@@ -20,7 +20,7 @@ My solutions to Paul Hudson's [100 Days of SwiftUI](https://www.hackingwithswift
 
 ## 🔖 Projects
 
-These projects helped and guided me through Swift and SwiftUI, but also offered me the opportunity of solving a couple of challenges by myself each time.
+These projects not only helped and guided me through learning Swift and SwiftUI, but also gave me the chance to tackle a few challenges on my own each time. It was a great experience and I feel more confident in my abilities now.
 
 - [Project 1 - WeSplit](/01-WeSplit/)
 - [Project 2 - Guess the Flag](/03-Guess%20the%20Flag/)
@@ -35,7 +35,7 @@ These projects helped and guided me through Swift and SwiftUI, but also offered 
 
 ## 🏆 Challenges
 
-Challenges were projects I developed by myself starting from the basic requirements outlined in the course.
+The challenges were projects that I developed on my own, starting from the basic requirements outlined in the course.
 
 - [Checkpoints](/00-Checkpoint/)
 - [Challenge Day - Unit Converter](/02-Challenge%20Day/)
