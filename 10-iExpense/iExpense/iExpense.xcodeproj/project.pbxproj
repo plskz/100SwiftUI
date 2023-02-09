@@ -65,12 +65,10 @@
 			children = (
 				2C145CAF298BF29700813CBC /* iExpenseApp.swift */,
 				2C145CB1298BF29700813CBC /* ContentView.swift */,
-				2C9082982995792C003FEB23 /* Extension-LocalCurrency.swift */,
-				2C90829A29957A9B003FEB23 /* Extension-ExpenseStyling.swift */,
 				2C6389F72995458D00210EA9 /* HeaderFont.swift */,
 				2C51729D2994114800461260 /* AddView.swift */,
-				2C5172992993FA4F00461260 /* ExpenseItem.swift */,
-				2C51729B2993FAB600461260 /* Expenses.swift */,
+				2C90829C29957CA3003FEB23 /* Extensions */,
+				2C90829D29957CE1003FEB23 /* Model */,
 				2C145CB3298BF29800813CBC /* Assets.xcassets */,
 				2C145CB5298BF29800813CBC /* Preview Content */,
 			);
@@ -83,6 +81,24 @@
 				2C145CB6298BF29800813CBC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2C90829C29957CA3003FEB23 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2C90829A29957A9B003FEB23 /* Extension-ExpenseStyling.swift */,
+				2C9082982995792C003FEB23 /* Extension-LocalCurrency.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2C90829D29957CE1003FEB23 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C5172992993FA4F00461260 /* ExpenseItem.swift */,
+				2C51729B2993FAB600461260 /* Expenses.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
