@@ -12,11 +12,6 @@ struct ContentView: View {
     
     let types = ["Business", "Personal"]
     
-    // challenge 1: I'll use locale currency instead of user's preferred currency ^,..,^
-    var localCurrency: FloatingPointFormatStyle<Double>.Currency {
-        .currency(code: Locale.current.currency?.identifier ?? "USD")
-    }
-    
     var body: some View {
         NavigationView {
             List {
@@ -33,7 +28,7 @@ struct ContentView: View {
                                 
                                 Spacer()
                                 
-                                Text(item.amount, format: localCurrency)
+                                Text(item.amount, format: .localCurrency) // challenge 1
                                     .foregroundColor(item.amount <= 10 ? .green : item.amount <= 100 ? .yellow : .red) // challenge 2
                             }
                         }
