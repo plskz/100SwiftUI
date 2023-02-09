@@ -10,6 +10,11 @@ struct ContentView: View {
     @StateObject var expenses = Expenses()
     @State private var showingAddExpense = false
     
+    // challenge 1: I'll use locale currency instead of user's preferred currency ^,..,^
+    var localCurrency: FloatingPointFormatStyle<Double>.Currency {
+        .currency(code: Locale.current.currency?.identifier ?? "USD")
+    }
+    
     var body: some View {
         NavigationView {
             List {
@@ -23,7 +28,7 @@ struct ContentView: View {
                         
                         Spacer()
                         
-                        Text(item.amount, format: .currency(code: "USD"))
+                        Text(item.amount, format: localCurrency)
                     }
                 }
                 .onDelete { IndexSet in
