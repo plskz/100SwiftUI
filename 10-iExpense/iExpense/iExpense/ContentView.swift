@@ -29,6 +29,7 @@ struct ContentView: View {
                         Spacer()
                         
                         Text(item.amount, format: localCurrency)
+                            .foregroundColor(item.amount <= 10 ? .green : item.amount <= 100 ? .yellow : .red) // challenge 2
                     }
                 }
                 .onDelete { IndexSet in
