@@ -16,6 +16,7 @@
 		2C51729E2994114800461260 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C51729D2994114800461260 /* AddView.swift */; };
 		2C6389F82995458D00210EA9 /* HeaderFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6389F72995458D00210EA9 /* HeaderFont.swift */; };
 		2C9082992995792C003FEB23 /* Extension-LocalCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9082982995792C003FEB23 /* Extension-LocalCurrency.swift */; };
+		2C90829B29957A9B003FEB23 /* Extension-ExpenseStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C90829A29957A9B003FEB23 /* Extension-ExpenseStyling.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		2C51729D2994114800461260 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		2C6389F72995458D00210EA9 /* HeaderFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderFont.swift; sourceTree = "<group>"; };
 		2C9082982995792C003FEB23 /* Extension-LocalCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-LocalCurrency.swift"; sourceTree = "<group>"; };
+		2C90829A29957A9B003FEB23 /* Extension-ExpenseStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-ExpenseStyling.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				2C145CAF298BF29700813CBC /* iExpenseApp.swift */,
 				2C145CB1298BF29700813CBC /* ContentView.swift */,
 				2C9082982995792C003FEB23 /* Extension-LocalCurrency.swift */,
+				2C90829A29957A9B003FEB23 /* Extension-ExpenseStyling.swift */,
 				2C6389F72995458D00210EA9 /* HeaderFont.swift */,
 				2C51729D2994114800461260 /* AddView.swift */,
 				2C5172992993FA4F00461260 /* ExpenseItem.swift */,
@@ -157,6 +160,7 @@
 				2C51729A2993FA4F00461260 /* ExpenseItem.swift in Sources */,
 				2C6389F82995458D00210EA9 /* HeaderFont.swift in Sources */,
 				2C51729E2994114800461260 /* AddView.swift in Sources */,
+				2C90829B29957A9B003FEB23 /* Extension-ExpenseStyling.swift in Sources */,
 				2C145CB0298BF29700813CBC /* iExpenseApp.swift in Sources */,
 				2C9082992995792C003FEB23 /* Extension-LocalCurrency.swift in Sources */,
 			);
