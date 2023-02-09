@@ -14,6 +14,7 @@
 		2C51729A2993FA4F00461260 /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5172992993FA4F00461260 /* ExpenseItem.swift */; };
 		2C51729C2993FAB600461260 /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C51729B2993FAB600461260 /* Expenses.swift */; };
 		2C51729E2994114800461260 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C51729D2994114800461260 /* AddView.swift */; };
+		2C6389F82995458D00210EA9 /* HeaderFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6389F72995458D00210EA9 /* HeaderFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		2C5172992993FA4F00461260 /* ExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseItem.swift; sourceTree = "<group>"; };
 		2C51729B2993FAB600461260 /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
 		2C51729D2994114800461260 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		2C6389F72995458D00210EA9 /* HeaderFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			children = (
 				2C145CAF298BF29700813CBC /* iExpenseApp.swift */,
 				2C145CB1298BF29700813CBC /* ContentView.swift */,
+				2C6389F72995458D00210EA9 /* HeaderFont.swift */,
 				2C51729D2994114800461260 /* AddView.swift */,
 				2C5172992993FA4F00461260 /* ExpenseItem.swift */,
 				2C51729B2993FAB600461260 /* Expenses.swift */,
@@ -149,6 +152,7 @@
 				2C51729C2993FAB600461260 /* Expenses.swift in Sources */,
 				2C145CB2298BF29700813CBC /* ContentView.swift in Sources */,
 				2C51729A2993FA4F00461260 /* ExpenseItem.swift in Sources */,
+				2C6389F82995458D00210EA9 /* HeaderFont.swift in Sources */,
 				2C51729E2994114800461260 /* AddView.swift in Sources */,
 				2C145CB0298BF29700813CBC /* iExpenseApp.swift in Sources */,
 			);
