@@ -6,7 +6,7 @@
 
 import SwiftUI
 
-/// For a bigger challenge, try splitting the expenses list into two sections: one for personal expenses, and one for business expenses.
+/// challenge 3 - For a bigger challenge, try splitting the expenses list into two sections: one for personal expenses, and one for business expenses.
 /// This is tricky for a few reasons, not least because it means being careful about how items are deleted!
 struct ExpenseSection: View {
     var title: String
