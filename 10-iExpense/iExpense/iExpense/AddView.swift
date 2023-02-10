@@ -20,6 +20,7 @@ struct AddView: View {
         NavigationView {
             Form {
                 TextField("Name", text: $name)
+                    .autocorrectionDisabled(true)
                 
                 Picker("Type", selection: $type) {
                     ForEach(types, id: \.self) {
