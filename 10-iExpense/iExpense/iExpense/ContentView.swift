@@ -13,29 +13,33 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(expenses.items) { item in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(item.name)
-                                .font(.headline)
-                            Text(item.type)
-                        }
-                        
-                        Spacer()
-                        
-                        Text(item.amount, format: .currency(code: "USD"))
-                    }
-                }
-                .onDelete { IndexSet in
-                    removeItems(at: IndexSet)
+                // challenge 3
+                ExpenseSection(title: "Business", expenses: expenses.businessItems, deleteItems: removeBusinessItems)
+                // challenge 3
+                ExpenseSection(title: "Personal", expenses: expenses.personalItems, deleteItems: removePersonalItems)
+                
+                if expenses.isEmpty {
+                    EmptyList()
                 }
             }
-            .navigationTitle("iExpense")
+            .navigationTitle("iExpense 💸")
             .toolbar {
-                Button {
-                    showingAddExpense = true
-                } label: {
-                    Image(systemName: "plus")
+                ToolbarItem(placement: .primaryAction) {
+                    Button {
+                        showingAddExpense = true
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+                
+                if expenses.isEmpty {
+                    // only show this when list is empty
+                    ToolbarItem(placement: .bottomBar) {
+                        Button("Add Expenses") {
+                            showingAddExpense = true
+                        }
+                        .buttonStyle(.ghost)
+                    }
                 }
             }
             .sheet(isPresented: $showingAddExpense) {
@@ -44,8 +48,26 @@ struct ContentView: View {
         }
     }
     
-    func removeItems(at offsets: IndexSet) {
-        expenses.items.remove(atOffsets: offsets)
+    func removeItems(at offsets: IndexSet, from inputArray: [ExpenseItem]) {
+        var objectsToDelete = IndexSet()
+        
+        for offset in offsets {
+            let item = inputArray[offset]
+            
+            if let index = expenses.items.firstIndex(of: item) {
+                objectsToDelete.insert(index)
+            }
+        }
+        
+        expenses.items.remove(atOffsets: objectsToDelete)
+    }
+    
+    func removePersonalItems(at offsets: IndexSet) {
+        removeItems(at: offsets, from: expenses.personalItems)
+    }
+    
+    func removeBusinessItems(at offsets: IndexSet) {
+        removeItems(at: offsets, from: expenses.businessItems)
     }
 }
 

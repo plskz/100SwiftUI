@@ -20,6 +20,7 @@ struct AddView: View {
         NavigationView {
             Form {
                 TextField("Name", text: $name)
+                    .autocorrectionDisabled(true)
                 
                 Picker("Type", selection: $type) {
                     ForEach(types, id: \.self) {
@@ -33,6 +34,10 @@ struct AddView: View {
             .navigationTitle("Add new expense")
             .toolbar {
                 Button("Save") {
+                    if name.isEmpty {
+                        name = "Unknown"
+                    }
+                    
                     let item = ExpenseItem(name: name, type: type, amount: amount)
                     expenses.items.append(item)
                     dismiss()
