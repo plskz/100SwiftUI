@@ -33,7 +33,7 @@ struct ContentView: View {
                 }
                 
                 if expenses.isEmpty {
-                    // only show this when empty
+                    // only show this when list is empty
                     ToolbarItem(placement: .bottomBar) {
                         Button("Add Expenses") {
                             showingAddExpense = true
@@ -48,7 +48,7 @@ struct ContentView: View {
         }
     }
     
-    func removeItems(at offsets: IndexSet, in inputArray: [ExpenseItem]) {
+    func removeItems(at offsets: IndexSet, from inputArray: [ExpenseItem]) {
         var objectsToDelete = IndexSet()
         
         for offset in offsets {
@@ -63,11 +63,11 @@ struct ContentView: View {
     }
     
     func removePersonalItems(at offsets: IndexSet) {
-        removeItems(at: offsets, in: expenses.personalItems)
+        removeItems(at: offsets, from: expenses.personalItems)
     }
     
     func removeBusinessItems(at offsets: IndexSet) {
-        removeItems(at: offsets, in: expenses.businessItems)
+        removeItems(at: offsets, from: expenses.businessItems)
     }
 }
 
