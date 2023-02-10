@@ -40,7 +40,7 @@ UserDefaults, @AppStorage, Codable, sheet(), onDelete(), @StateObject, @Observed
 
 ![Screenshot](./_Screenshots/Screenshot.png)
 
-![Demo](./_Screenshots/iExpenseDemo.gif)
+<img src="./_Screenshots/iExpenseDemo.gif" alt="Demo" height="900">
 
 </div>
 
