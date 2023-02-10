@@ -40,7 +40,22 @@ struct ExpenseSection: View {
 
 struct ExpenseSection_Previews: PreviewProvider {
     static var previews: some View {
-        ExpenseSection(title: "Example", expenses: []) { _ in }
+        List {
+            ExpenseSection(
+                title: "Business",
+                expenses: [
+                    ExpenseItem(name: "Macbook Pro", type: "Business", amount: 1200),
+                    ExpenseItem(name: "Uber", type: "Business", amount: 21.59)
+                ]) { _ in }
+            
+            ExpenseSection(
+                title: "Personal",
+                expenses: [
+                    ExpenseItem(name: "Breakfast", type: "Personal", amount: 10),
+                    ExpenseItem(name: "Lunch", type: "Personal", amount: 12),
+                    ExpenseItem(name: "Gift", type: "Personal", amount: 500)
+                ]) { _ in }
+        }
     }
 }
 
