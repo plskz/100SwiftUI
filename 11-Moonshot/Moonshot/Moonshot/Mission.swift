@@ -17,7 +17,7 @@ struct Mission: Codable, Identifiable {
     let crew: [CrewRole]
     let description: String
     
-    var display: String {
+    var displayName: String {
         "Apollo \(id)"
     }
     
