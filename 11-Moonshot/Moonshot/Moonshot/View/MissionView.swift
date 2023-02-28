@@ -25,7 +25,7 @@ struct MissionView: View {
                         .frame(maxWidth: geometry.size.width * 0.6)
                         .padding(.top)
                     
-                    Text(mission.formattedLongLaunchDate)
+                    Label(mission.formattedLongLaunchDate, systemImage: "calendar")
                         .font(.headline.bold())
                         .padding(10)
                         .overlay(
