@@ -39,16 +39,14 @@ struct MissionView: View {
                         CustomDivider()
                         
                         Text("Mission Highlights")
-                            .font(.title.bold())
-                            .padding(.bottom, 5)
+                            .titleStyle()
                         
                         Text(mission.description)
                         
                         CustomDivider()
                         
-                        Text("Crew")
-                            .font(.title.bold())
-                            .padding(.bottom, 5)
+                        Text("Crew Members")
+                            .titleStyle()
                         
                     }
                     .padding(.horizontal)

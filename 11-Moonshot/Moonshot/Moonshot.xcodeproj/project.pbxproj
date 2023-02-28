@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C931EAE29ADDB3A007E3FB5 /* CrewRoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C931EAD29ADDB3A007E3FB5 /* CrewRoster.swift */; };
+		2C931EB329ADE5EA007E3FB5 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C931EB229ADE5EA007E3FB5 /* Title.swift */; };
 		2C9659CA29A6463A0093DAB4 /* MoonshotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9659C929A6463A0093DAB4 /* MoonshotApp.swift */; };
 		2C9659CC29A6463A0093DAB4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9659CB29A6463A0093DAB4 /* ContentView.swift */; };
 		2C9659CE29A6463C0093DAB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C9659CD29A6463C0093DAB4 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		2C931EAD29ADDB3A007E3FB5 /* CrewRoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewRoster.swift; sourceTree = "<group>"; };
+		2C931EB229ADE5EA007E3FB5 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		2C9659C629A6463A0093DAB4 /* Moonshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moonshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9659C929A6463A0093DAB4 /* MoonshotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotApp.swift; sourceTree = "<group>"; };
 		2C9659CB29A6463A0093DAB4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				2CBE2A4D29ADD8B200927D22 /* CustomDivider.swift */,
 				2CD61D4329A89CF70015211C /* Color-Theme.swift */,
 				2CEAF9A629A84C3100C5F7C3 /* Bundle-Decodable.swift */,
+				2C931EB229ADE5EA007E3FB5 /* Title.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			files = (
 				2CD2282A29AC5B4700522B0E /* MissionView.swift in Sources */,
 				2CEAF9A529A84C2100C5F7C3 /* Astronaut.swift in Sources */,
+				2C931EB329ADE5EA007E3FB5 /* Title.swift in Sources */,
 				2CD2282C29AC712800522B0E /* AstronautView.swift in Sources */,
 				2C931EAE29ADDB3A007E3FB5 /* CrewRoster.swift in Sources */,
 				2CD61D4429A89CF70015211C /* Color-Theme.swift in Sources */,
