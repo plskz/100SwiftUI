@@ -3,7 +3,7 @@
 
 [![Swift 5.7.2](https://img.shields.io/badge/Swift-5.7.2-orange?style=flat&logo=swift)](https://developer.apple.com/swift/) [![Xcode 14.2](https://img.shields.io/badge/Xcode-14.2-007ACC?style=flat&logo=Xcode&logoColor=blue)](https://developer.apple.com/xcode/)
 
-<samp>Current Day: 40</samp>
+<samp>Current Day: 43</samp>
 
   <br/>
   
@@ -29,8 +29,8 @@ These projects not only helped and guided me through learning Swift and SwiftUI,
 - [Project 5 - WordScramble](/07-WordScramble/)
 - [Project 6 - Animations](/08-Animations)
 - [Project 7 - iExpense](/10-iExpense/)
-- Project 8 - Moonshot - 🚧 In Progress
-- Project 9 - Drawing
+- [Project 8 - Moonshot](/11-Moonshot/)
+- Project 9 - Drawing - 🚧 In Progress
 - ...
 
 ## 🏆 Challenges
