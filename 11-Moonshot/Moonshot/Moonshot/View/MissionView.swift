@@ -25,7 +25,7 @@ struct MissionView: View {
                         .frame(maxWidth: geometry.size.width * 0.6)
                         .padding(.top)
                     
-                    Text(mission.formattedLongLaunchDate)
+                    Label(mission.formattedLongLaunchDate, systemImage: "calendar")
                         .font(.headline.bold())
                         .padding(10)
                         .overlay(
@@ -39,16 +39,14 @@ struct MissionView: View {
                         CustomDivider()
                         
                         Text("Mission Highlights")
-                            .font(.title.bold())
-                            .padding(.bottom, 5)
+                            .titleStyle()
                         
                         Text(mission.description)
                         
                         CustomDivider()
                         
-                        Text("Crew")
-                            .font(.title.bold())
-                            .padding(.bottom, 5)
+                        Text("Crew Members")
+                            .titleStyle()
                         
                     }
                     .padding(.horizontal)
