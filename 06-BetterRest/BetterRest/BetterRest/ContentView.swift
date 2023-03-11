@@ -41,9 +41,9 @@ struct ContentView: View {
                 Section {
                     HStack {
                         Icon("cup.and.saucer")
-                        Picker(coffeeAmount == 1 ? "1 cup" : "\(coffeeAmount) cups", selection: $coffeeAmount) {
+                        Picker("^[\(coffeeAmount) cup](inflect: true)", selection: $coffeeAmount) {
                             ForEach(1...20, id: \.self) {
-                                Text($0 == 1 ? "1 cup" : "\($0) cups")
+                                Text("^[\($0) cup](inflect: true)")
                             }
                         }
                     }
